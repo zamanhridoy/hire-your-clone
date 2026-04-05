@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: oklch(0.98 0.01 240);
+  --color-brand-100: oklch(0.96 0.02 240);
+  --color-brand-200: oklch(0.94 0.03 240);
+  --color-brand-300: oklch(0.92 0.04 240);
+  
+  --color-lavender-glow: oklch(0.95 0.05 300 / 0.3);
+  --color-peach-mist: oklch(0.97 0.04 40 / 0.2);
+  --color-blue-haze: oklch(0.94 0.06 220 / 0.2);
+
+  --color-border: oklch(0.92 0.01 240 / 0.5); /* slate-200/50 equivalent */
+  --color-background: oklch(0.98 0.01 240); /* slate-50 */
+  --color-foreground: oklch(0.2 0.02 240); /* slate-800 */
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 8s ease-in-out infinite 1s;
+  --animate-fade-up: fadeUp 0.8s ease-out forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-indigo-100 selection:text-indigo-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+  
+  .glass-dark {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .iridescent-bg {
+    background: radial-gradient(circle at 0% 0%, var(--color-lavender-glow) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, var(--color-peach-mist) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, var(--color-blue-haze) 0%, transparent 50%);
+    background-color: var(--background);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  .floating {
+    animation: var(--animate-float);
+  }
+
+  .floating-delayed {
+    animation: var(--animate-float-delayed);
+  }
+}

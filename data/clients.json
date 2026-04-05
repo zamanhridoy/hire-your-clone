@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "company": "Aetheris Lab",
+    "va": "Sarah M.",
+    "status": "Active",
+    "agentStatus": "Active",
+    "email": "alice@aetheris.com"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "company": "CloudScale",
+    "va": "Dave K.",
+    "status": "Onboarding",
+    "agentStatus": "Training",
+    "email": "bob@cloudscale.io"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "company": "Z-Tech",
+    "va": "Elena R.",
+    "status": "Active",
+    "agentStatus": "Active",
+    "email": "charlie@ztech.biz"
+  },
+  {
+    "id": 4,
+    "name": "Diana Prince",
+    "company": "Themyscira AI",
+    "va": "Sarah M.",
+    "status": "Offline",
+    "agentStatus": "Offline",
+    "email": "diana@themys.ai"
+  },
+  {
+    "id": 5,
+    "name": "Eve Online",
+    "company": "CCP Studio",
+    "va": "Dave K.",
+    "status": "Training",
+    "agentStatus": "Training",
+    "email": "eve@ccp.com"
+  },
+  {
+    "id": 1775036450473,
+    "name": "Arafat Emon",
+    "company": "dd",
+    "email": "arafatremon1@gmail.com",
+    "va": "Dave K.",
+    "status": "Onboarding",
+    "agentStatus": "Offline"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(ls -la /f/hire-your-clone/src/app/admin/*/)",
+      "Read(//f:/hire-your-clone/src/app/**)",
+      "Bash(find /f -name \"page.tsx\" -path \"*/admin/clients/*\")",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)",
+      "Bash(wc -l /f/hire-your-clone/src/components/*.tsx)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Bash(npx prisma:*)",
+      "Bash(npm search:*)",
+      "Bash(npm run:*)",
+      "Bash(cp -r .next/static .next/standalone/.next/static)",
+      "Bash(mkdir -p .next/standalone/public)",
+      "Bash(cp -r public/* .next/standalone/public/)",
+      "Bash(cp .env.local .next/standalone/.env.local)",
+      "Bash(cp .env .next/standalone/.env)",
+      "Bash(rm -rf .next/standalone/.next/static .next/standalone/public)",
+      "Bash(powershell -Command \"Compress-Archive -Path * -DestinationPath 'F:/hire-your-clone/standalone-deploy.zip' -Force\")",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git add:*)"
+    ],
+    "additionalDirectories": [
+      "f:\\hire-your-clone\\src\\app\\api\\clients"
+    ]
+  }
+}
